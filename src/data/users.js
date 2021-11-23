@@ -1,4 +1,6 @@
-
+export let errors = [];
+export let employees = []
+export let customers = []
 //id, firstName, lastName, city,age, creditCardNumber
 export const users = [
     {

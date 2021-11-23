@@ -1,9 +1,15 @@
+import ErrorHandler from "../controllers/errorHandler/errorHandler.js"
+import CustomerValidation from "../controllers/userValidation/CustomerValidation.js"
+import EmployeeValidation from "../controllers/userValidation/EmployeeValidation.js"
+import UserValidation from "../controllers/userValidation/userValidation.js"
 import { BaseLogger, ElasticLogger, MongoLogger } from "../crossCuttingConcerns/logging/logger.js"
+import { errors, users } from "../data/users.js"
 import Customer from "../models/customer.js"
 import User from "../models/user.js"
 import UserService from "../services/userService.js"
 
 console.log("User component yüklendi")
+
 
 let logger1 = new MongoLogger()
 let userService = new UserService(logger1)
@@ -36,6 +42,7 @@ customerToAdd.type = "customer"
 userService.add(customerToAdd)
 console.log(userService.customers)
 console.log(userService.employees)
-console.log(userService.errors)
+console.log(errors)
 console.log(userService.getCustomersSorted())
 //22.00 Dersteyiz
+

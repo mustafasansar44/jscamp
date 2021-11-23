@@ -1,3 +1,4 @@
+
 export default class User {
     constructor(id, firstName, lastName, city,age) {
         this.id = id
@@ -6,4 +7,6 @@ export default class User {
         this.city = city
         this.age = age
     }
+
+
 }
